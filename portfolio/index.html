@@ -30,8 +30,9 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://menghuichou.github.io/images/eecs151_cpu.jpg">
 <meta property="og:image" content="https://menghuichou.github.io/images/ee130_transistor.png">
+<meta property="og:image" content="https://menghuichou.github.io/images/cs61c_numpy.png">
 <meta property="article:published_time" content="2022-07-28T05:38:04.000Z">
-<meta property="article:modified_time" content="2022-07-28T17:43:03.041Z">
+<meta property="article:modified_time" content="2022-07-28T21:48:46.077Z">
 <meta property="article:author" content="MengHui Anna Chou">
 <meta property="article:tag" content="MengHui Chou, Anna, EECS, Berkeley">
 <meta name="twitter:card" content="summary">
@@ -97,8 +98,6 @@
         <li class="menu-item menu-item-portfolio"><a href="/portfolio/" rel="section"><i class="fa fa-flag fa-fw"></i>portfolio</a></li>
         <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li>
         <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
-        <li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>Schedule</a></li>
   </ul>
 </nav>
 
@@ -129,7 +128,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#ZYNQ-7000-Series-FPGA-32-Bit-RISC-V-CPU"><span class="nav-number">1.</span> <span class="nav-text">ZYNQ 7000-Series FPGA: 32-Bit RISC-V CPU</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NMOS-Device-Design"><span class="nav-number">2.</span> <span class="nav-text">NMOS Device Design</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#ZYNQ-7000-Series-FPGA-32-Bit-RISC-V-CPU"><span class="nav-number">1.</span> <span class="nav-text">ZYNQ 7000-Series FPGA: 32-Bit RISC-V CPU</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NMOS-Device-Design"><span class="nav-number">2.</span> <span class="nav-text">NMOS Device Design</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C-Language-Version-NumPy"><span class="nav-number">3.</span> <span class="nav-text">C-Language-Version NumPy</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -221,7 +220,8 @@
       
       <div class="post-body">
           <h2 id="ZYNQ-7000-Series-FPGA-32-Bit-RISC-V-CPU"><a href="#ZYNQ-7000-Series-FPGA-32-Bit-RISC-V-CPU" class="headerlink" title="ZYNQ 7000-Series FPGA: 32-Bit RISC-V CPU"></a>ZYNQ 7000-Series FPGA: 32-Bit RISC-V CPU</h2><p>A project using Verilog where Viraj Ramakrishnan and I built a 32-bit three-stage pipelined RISC-V CPU with synchronous read-and-write memory. This CPU features with 40 supported assembly instructions, BIOS memory, and memory mapped I/O for UART. It also achieves CPI 1.18 and clocks at 66.7 MHz.<br><img src="/images/eecs151_cpu.jpg" alt="EECS151 CPU"><br>This is one of our designs which was implemented with paralleled memory.<br><a href="/data/eecs151_cpu.pdf">Click Here to View the Report</a></p>
-<h2 id="NMOS-Device-Design"><a href="#NMOS-Device-Design" class="headerlink" title="NMOS Device Design"></a>NMOS Device Design</h2><p>A porject using TCAD (Sentauras) to simulate the behavior of customized NMOS. The goal for this project is to let students be familiar with how a transistor is designed where we have to account for specification and tradeoffs. The given requirements were that all customized NMOSs should meet I_on (saturated current) &gt;= 400 uA per um channel width and I_off &lt;= 1nA per um channel width with given costrants. Fan Xia and I’s design achieved I_on 0.00409 A and I_off 3.158 * 10^-10 A, denoting I_on/I_off to be 1296123.50.<br><img src="/images/ee130_transistor.png" alt="EE130 Transistor"><br>Due to academic intergrity, the picture above is for demo only. For more details about our design, please reach me out :)</p>
+<h2 id="NMOS-Device-Design"><a href="#NMOS-Device-Design" class="headerlink" title="NMOS Device Design"></a>NMOS Device Design</h2><p>A project using TCAD (Sentauras) to simulate the behavior of customized NMOS. The goal for this project is to let students be familiar with how a transistor is designed where we have to account for specification and tradeoffs. The given requirements were that all customized NMOSs should meet I_on (saturated current) &gt;= 400 uA per um channel width and I_off &lt;= 1nA per um channel width with given costrants. Fan Xia and I’s design achieved I_on 0.00409 A and I_off 3.158 * 10^-10 A, denoting I_on/I_off to be 1296123.50.<br><img src="/images/ee130_transistor.png" alt="EE130 Transistor"><br>Due to academic intergrity, the picture above is for demo only. For more details about our design, please reach me out :)</p>
+<h2 id="C-Language-Version-NumPy"><a href="#C-Language-Version-NumPy" class="headerlink" title="C-Language-Version NumPy"></a>C-Language-Version NumPy</h2><p>A project using C language to build NumPy, a powerful python library that supports for large, multi-dimensional array and matric computation. The purpose of this project is to understand the features of C language such as fast and efficient memory management, portability, and extensibility. This library featured with matrix operations such as add, multiplication, and power, whose algorithms were optimized by SIMD, OpenMP, paralleling, and loop unrolling. The final product achived 878.5 speed-up rate in power of a matrix and 55.1 speed-up rate in matrix multiplication on CS61C Benchmark.<br><img src="/images/cs61c_numpy.png" alt="CS61C Benchmark"></p>
 
       </div>
       
